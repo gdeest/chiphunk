@@ -165,6 +165,12 @@ void w_cpArbiterGetNormal(const cpArbiter *arbiter, cpVect *out)
   *out = cpArbiterGetNormal(arbiter);
 }
 
+void w_cpArbiterTotalImpulse(const cpArbiter *arbiter, cpVect *out)
+{
+  *out = cpArbiterTotalImpulse(arbiter);
+}
+
+
 void w_cpArbiterGetPointA(const cpArbiter *arbiter, int i, cpVect *out)
 {
   *out = cpArbiterGetPointA(arbiter, i);

@@ -82,6 +82,18 @@ arbiterSurfaceVelocity = mkStateVar w_cpArbiterGetSurfaceVelocity cpArbiterSetSu
 arbiterUserData :: Arbiter -> StateVar DataPtr
 arbiterUserData = mkStateVar cpArbiterGetUserData cpArbiterSetUserData
 
+{# fun unsafe w_cpArbiterTotalImpulse {`Arbiter', alloca- `Vect' peek*} -> `()' #}
+
+-- | Calculated total impulse applied by the arbiter.
+arbiterTotalImpulse :: Arbiter -> GettableStateVar Vect
+arbiterTotalImpulse = makeGettableStateVar . w_cpArbiterTotalImpulse
+
+{# fun unsafe cpArbiterTotalKE {`Arbiter'} -> `Double' #}
+
+-- | Total kinetic energy lost in the collision.
+arbiterTotalKE :: Arbiter -> GettableStateVar Double
+arbiterTotalKE = makeGettableStateVar . cpArbiterTotalKE
+
 {# fun unsafe cpArbiterGetCount {`Arbiter'} -> `Int' #}
 
 -- | The number of contacts tracked by this arbiter.
