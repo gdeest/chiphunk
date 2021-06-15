@@ -947,6 +947,8 @@ module Chiphunk.Low
   , arbiterFriction
   , arbiterSurfaceVelocity
   , arbiterUserData
+  , arbiterTotalImpulse
+  , arbiterTotalKE
 
     -- *** Collision Point(s)
   , arbiterCount
