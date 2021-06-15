@@ -3,6 +3,8 @@ module Chiphunk.Low.Arbiter
   , arbiterRestitution
   , arbiterFriction
   , arbiterSurfaceVelocity
+  , arbiterTotalImpulse
+  , arbiterTotalKE
   , arbiterUserData
   , arbiterCount
   , arbiterNormal
